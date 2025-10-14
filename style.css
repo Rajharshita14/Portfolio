@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-around;
@@ -43,12 +41,10 @@ nav ul li a {
     display: flex;
     align-items: center;
     gap: 6px;
-    /* spacing between icon and text */
 }
 
 nav ul li a i {
     font-size: 1rem;
-    /* icon size */
     transition: color 0.3s ease;
     vertical-align: middle;
 }
@@ -73,7 +69,6 @@ nav ul li a:hover i {
     color: rgb(170, 107, 228);
 }
 
-/* Home Section */
 .firstsection {
     display: flex;
     align-items: center;
@@ -94,10 +89,8 @@ nav ul li a:hover i {
 
 .intro-text {
     font-size: 1.1rem;
-    /* Increased font size */
     margin-top: 20px;
     color: rgba(210, 200, 255, 0.9);
-    /* Slightly higher opacity */
 }
 
 .rightsection {
@@ -117,7 +110,6 @@ nav ul li a:hover i {
     transform: scale(1.05);
 }
 
-/* Gradient Name Text */
 .leftsection .purple {
     background: linear-gradient(90deg, rgb(170, 107, 228), rgb(187, 130, 255));
     -webkit-background-clip: text;
@@ -129,7 +121,6 @@ nav ul li a:hover i {
     background: linear-gradient(90deg, rgb(170, 107, 228), rgb(100, 67, 224));
     color: white;
     padding: 12px 24px;
-    /* Slightly bigger padding */
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -144,7 +135,6 @@ nav ul li a:hover i {
     box-shadow: 0 0 15px rgba(170, 107, 228, 0.8);
 }
 
-/* Sections */
 .section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -174,31 +164,23 @@ nav ul li a:hover i {
 
 .section-text {
     font-size: 1.05rem;
-    /* Slightly increased */
     color: rgba(210, 200, 255, 0.9);
-    /* Slightly higher opacity */
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Skills Section */
 .skills-container {
     text-align: center;
     color: rgba(210, 200, 255, 0.95);
     line-height: 2;
-    /* More spacing for readability */
     font-size: 1.05rem;
     margin-bottom: 30px;
-    /* Extra spacing from next section */
 }
 
-/* Project Cards */
 .project-card {
     background-color: rgb(18, 18, 62);
     padding: 25px;
-    /* More padding */
     margin: 25px auto;
-    /* Increased spacing */
     border-radius: 12px;
     max-width: 700px;
     box-shadow: 0 0 15px rgba(170, 107, 228, 0.3);
@@ -220,7 +202,6 @@ nav ul li a:hover i {
     color: rgba(210, 200, 255, 0.9);
 }
 
-/* Contact */
 .contact-content {
     text-align: center;
 }
@@ -235,7 +216,6 @@ nav ul li a:hover i {
     color: rgb(255, 182, 255);
 }
 
-/* Footer */
 footer {
     background-color: rgb(18, 18, 62);
     padding: 20px 0;
@@ -250,7 +230,6 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .firstsection {
         flex-direction: column;
