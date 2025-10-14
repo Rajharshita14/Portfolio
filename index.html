@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshita - Portfolio</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
 
@@ -18,7 +15,6 @@
 <body>
     <header>
         <nav>
-            <!-- Brand with icon -->
             <div class="left"><i class="fas fa-laptop-code"></i> Harshita</div>
             <div class="right">
                 <ul>
@@ -33,7 +29,6 @@
     </header>
 
     <main>
-        <!-- Home Section -->
         <section id="home" class="firstsection">
             <div class="leftsection">
                 Hi, I’m <span class="purple">Harshita Raj</span><br>
@@ -44,7 +39,6 @@
                     Constantly exploring new tools and frameworks to bring ideas to life through clean and elegant
                     design.
                 </p>
-                <!-- Download Resume Button -->
                 <button class="btn" onclick="downloadResume()">Download Resume</button>
             </div>
             <div class="rightsection">
@@ -52,7 +46,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="section-title">About Me</h2>
             <p class="section-text">
@@ -67,7 +60,6 @@
             </p>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section">
             <h2 class="section-title">Skills</h2>
             <div class="skills-container">
@@ -80,7 +72,6 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
 
@@ -104,7 +95,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-content">
@@ -121,7 +111,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>© 2025 Harshita Raj. All rights reserved.</p>
@@ -129,7 +118,6 @@
     </footer>
 
     <script>
-        // Scroll animation
         const sections = document.querySelectorAll('.section');
         const options = { threshold: 0.1 };
 
@@ -144,7 +132,6 @@
 
         sections.forEach(section => observer.observe(section));
 
-        // Download Resume Function
         function downloadResume() {
             const link = document.createElement('a');
             link.href = 'resume.pdf'; 
