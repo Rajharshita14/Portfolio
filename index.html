@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshita - Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Brand with icon -->
+            <div class="left"><i class="fas fa-laptop-code"></i> Harshita</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="firstsection">
+            <div class="leftsection">
+                Hi, I’m <span class="purple">Harshita Raj</span><br>
+                A Computer Science Engineer & Web Developer
+                <p class="intro-text">
+                    I’m passionate about creating interactive and visually appealing websites that connect technology
+                    with creativity.
+                    Constantly exploring new tools and frameworks to bring ideas to life through clean and elegant
+                    design.
+                </p>
+                <!-- Download Resume Button -->
+                <button class="btn" onclick="downloadResume()">Download Resume</button>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="Profile Image">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">
+                I’m a 2025 B.Tech Computer Science graduate with a passion for creating modern, visually appealing, and
+                responsive web designs.
+                I’m calm, determined, and disciplined — qualities that help me stay focused and consistent while
+                learning and building projects.
+                As a hands-on learner, I enjoy exploring new technologies and translating creative ideas into clean,
+                functional designs.
+                Currently, I’m sharpening my frontend development skills and preparing to begin my journey as a
+                professional developer.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <p><strong>Programming Languages: </strong> Java, Python</p>
+                <p><strong>Web Development: </strong> HTML, CSS, JavaScript</p>
+                <p><strong>Frameworks & Tools: </strong> React, Spring Boot </p>
+                <p><strong>Database Management: </strong> MySQL, SQL</p>
+                <p><strong>Version Control: </strong> Git & GitHub</p>
+                <p><strong>Soft Skills: </strong> Problem Solving • Team Collaboration • Adaptability</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-card">
+                <h3>Quiz App</h3>
+                <p>Built an interactive web-based quiz application with multiple-choice questions and scoring
+                    functionality.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, React</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>Created a responsive portfolio website to showcase my projects and skills.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>A system to manage books, users, and issue/return records efficiently.</p>
+                <p><strong>Tech Stack:</strong> Java, MySQL</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <p class="section-text">
+                    Feel free to reach out to me through email or connect with me on LinkedIn or GitHub.
+                </p>
+                <div class="contact-links">
+                    <p>Email: <a href="mailto:rajharshita887@gmail.com">rajharshita887@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshita-raj-716869273/" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/harshitaraj</a></p>
+                    <p>GitHub: <a href="https://github.com/harshitaraj" target="_blank" rel="noopener noreferrer">github.com/harshitaraj</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Harshita Raj. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        const sections = document.querySelectorAll('.section');
+        const options = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Download Resume Function
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'resume.pdf'; 
+            link.download = 'resume.pdf';
+            link.click();
+        }
+    </script>
+</body>
+
+</html>
